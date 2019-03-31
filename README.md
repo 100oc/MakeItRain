@@ -44,6 +44,6 @@ a custom script must add.
  <img src="https://raw.githubusercontent.com/100oc/MakeItRain/master/screenshots/screenshot.jpg">
  <img src="https://raw.githubusercontent.com/100oc/MakeItRain/master/screenshots/screenshot2.jpg">
   
-# p.s 
-all images (pig, money, and all other art assets in this pack) make by blackcore artist. please respect.<br>
+<br>
+Designed and Developed by Blackcore Team.<br>
 <img src="http://blackcore.ir/envato/codecanyon/make-it-rain/resources/logo.png">
