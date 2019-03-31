@@ -1,7 +1,9 @@
 # MakeItRain
 A Fun Wordpress Plugin - Make Money Rain AnyWhere
 
-<a href="http://blackcore.ir/envato/codecanyon/make-it-rain/">Custom Script Use Demo</a>
+<a href="http://blackcore.ir/envato/codecanyon/make-it-rain/">Custom Script Use Demo</a><br>
+<a href="http://blackcore.ir/envato/codecanyon/make-it-rain/wp/" target="_blank">Wordpress Live Example 1 (Rain on Logo)</a><br>
+<a href="http://blackcore.ir/envato/codecanyon/make-it-rain/wp2/" target="_blank">Wordpress Live Example 2 (Rain on Click Every Where)</a><br>
 
 with this widget, you can throw money/paper at air on click event or can be use customized for making money rain in one or multiple sections on site. make money rain(script animation (not a gif!)) everywhere in your site that you want. 
 Wordpress Live Example 1 (Rain on Logo) - Wordpress Live Example 2 (Rain on Click Every Where) 
