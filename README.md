@@ -46,3 +46,4 @@ a custom script must add.
   
 # p.s 
 all images (pig, money, and all other art assets in this pack) make by blackcore artist. please respect.
+<img src="http://blackcore.ir/envato/codecanyon/make-it-rain/resources/logo.png">
