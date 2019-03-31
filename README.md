@@ -1,6 +1,8 @@
 # MakeItRain
 A Fun Wordpress Plugin - Make Money Rain AnyWhere
 
+<img src="http://blackcore.ir/envato/codecanyon/make-it-rain/resources/08.png">
+
 <a href="http://blackcore.ir/envato/codecanyon/make-it-rain/">Custom Script Use Demo</a><br>
 <a href="http://blackcore.ir/envato/codecanyon/make-it-rain/wp/" target="_blank">Wordpress Live Example 1 (Rain on Logo)</a><br>
 <a href="http://blackcore.ir/envato/codecanyon/make-it-rain/wp2/" target="_blank">Wordpress Live Example 2 (Rain on Click Every Where)</a><br>
