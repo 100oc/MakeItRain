@@ -1,0 +1,102 @@
+body {
+    text-align: center;
+    background-color: #f0c4cd;
+    font-family: 'Major Mono Display', monospace;
+}
+.zone, .big, .colorful {
+    width: 30%;
+    height: 200px;
+    background-color: rgba(0,0,0,0.1);
+    position: relative;
+    float: left;
+    margin: 1.5%;
+    cursor: pointer;
+}
+.zone:hover , big:hover, .colorful:hover {
+    background-color: rgba(0,0,0,0.2);
+}
+.title{
+    background-color: rgba(0,0,0,0.5);
+    color : white;
+    padding: 7px 3px;
+    position: absolute;
+    float: left;
+    width: 96%;
+    bottom: 0px;
+    font-size: 12px;
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+}
+.title span{
+    font-weight: bold;
+}
+.link {
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+    color: darkolivegreen;
+    font-style: normal;
+    text-decoration: none;
+    font-weight: bold;
+    position: relative;
+    float: left;
+    width: 100%;
+    font-family: 'Pacifico', cursive;
+}
+.link:hover{
+    color: forestgreen;
+}
+.desc{
+    font-family: 'Muli', sans-serif;
+    text-align: justify;
+    direction: ltr;
+
+}
+.footer{
+    margin-top: 40px;
+    clear: both;
+    width: 100%;
+    position: relative;
+    font-family: 'Muli', sans-serif;
+    float: left;
+    font-size: 11px;
+    margin-bottom: 30px;
+
+}
+.unselectable{
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+}
+.footer .text{
+    position: relative;
+    float: left;
+    width: 100%;
+}
+.footer img{
+    margin: 0 auto;
+}
+h1{
+    margin :20px;
+    font-size: 26px;
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+}

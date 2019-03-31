@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Example Page</title>
+    <script src="js/jquery.min.js" type="application/javascript"></script>
+    <script src="js/makeitrain.js" type="application/javascript"></script>
+    <link href="resources/style.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Major+Mono+Display|Pacifico" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
+
+    <script>
+        $(function () {
+            window.pigClock = new BlackTimeClass(75);
+        });
+    </script>
+    <script>
+        function generateRandomNumber(min , max) {
+            let random_number = Math.random() * (max-min) + min;
+            return Math.floor(random_number);
+        }
+        $(function () {
+            let packets = ['paper-orange','paper-white','paper-red','pig-gold','pig-green','pig-pink','pig-red','pig-blue','stripes-white'];
+            new BlackMoney($('#main')[0],window.pigClock, {x : 460, y : 50},'resources/pig-green.png');
+
+            let dir0 = 1;
+            setInterval(function () {
+                let select = 'resources/pig-green.png';
+                new BlackMoney($('#main')[0],window.pigClock, {x : generateRandomNumber(430,550), y : generateRandomNumber(55,75)},select,0.5,dir0);
+                dir0 = (dir0 ===1)?-1:1;
+            },800);
+
+            let dir = 1;
+            $('.colorful').click(function (event) {
+                let select = 'resources/'+packets[generateRandomNumber(0,packets.length)]+'.png';
+                new BlackMoney($('body')[0],window.pigClock, {x : event.originalEvent.pageX-10, y : event.originalEvent.pageY-40},select,0.5,dir);
+                dir = (dir ===1)?-1:1;
+            });
+
+            $('.zone').click(function (event) {
+                let select = 'resources/'+$(event.target).attr('type')+'.png';
+                new BlackMoney($('body')[0],window.pigClock, {x : event.originalEvent.pageX-10, y : event.originalEvent.pageY-40},select,0.5,dir);
+                dir = (dir ===1)?-1:1;
+            });
+            $('.big').click(function (event) {
+                let select = 'resources/'+'stripes-white'+'.png';
+                new BlackMoney($('body')[0],window.pigClock, {x : event.originalEvent.pageX-10, y : event.originalEvent.pageY-40},select,1,dir);
+                dir = (dir ===1)?-1:1;
+            });
+            $('.link').click(function (event) {
+                let select = 'resources/'+'pig-green'+'.png';
+                new BlackMoney($('body')[0],window.pigClock, {x : event.originalEvent.pageX-10, y : event.originalEvent.pageY-40},select,0.5,dir);
+                dir = (dir ===1)?-1:1;
+            });
+
+            $('#explode').click(function (event) {
+                let element = document.getElementById('explode');
+                let detail = element.getBoundingClientRect(),
+                    bodyDetail = document.body.getBoundingClientRect();
+                let select = 'resources/'+'pig-green'+'.png';
+                let money1 = new BlackMoney($('body')[0],window.pigClock, {x : detail.x + generateRandomNumber(0,detail.width) , y : detail.y - bodyDetail.y + generateRandomNumber(0,detail.height)-30},select,0.5,1);
+                setTimeout(function () {
+                    new BlackMoney($('body')[0],window.pigClock, {x : detail.x + generateRandomNumber(0,detail.width) , y : detail.y - bodyDetail.y + generateRandomNumber(0,detail.height+20)-50},'resources/'+'pig-red'+'.png',0.5,1);
+                },152);
+                setTimeout(function () {
+                    new BlackMoney($('body')[0],window.pigClock, {x : detail.x + generateRandomNumber(0,detail.width) , y : detail.y - bodyDetail.y + generateRandomNumber(0,detail.height+20)-50},select,0.5,-1);
+                },40);
+            });
+        });
+    </script>
+</head>
+<body>
+    <div id="main" style="width: 1000px;height: 500px; background-color: #f0c4cd; margin: 0 auto;     position: relative;">
+        <img src="resources/08.png" style="margin-top: 80px">
+        <div class="desc">
+            with this widget, you can throw money/paper at air on click event or can be use customized for making money rain in one or multiple sections on site. make money rain(script animation (not a gif!)) everywhere in your site that you want.
+            <br><br>
+            you can use this script five-way:
+            <h4>1. Make every click worth :)</h4>
+            in this mode, every click in your site, make a custom money animation.
+            <br>
+            <span style="color:#989898;font-size: 11px">this feature can be enabled in plugin setting.</span>
+
+            <h4>2. Base on Tag</h4>
+            choose by you that what tag trigger for money makes. like : < a > < img > . for example this link :
+            <a href="#" class="link">when you click this link you make money! in Air! :)</a>
+            <br>
+            <span style="color:#989898;font-size: 11px">this feature can be enabled in plugin setting.</span>
+
+            <h4>3. Custom Class</h4>
+            put your custom CSS class name in setting and every element that contains specified class name make money on click.
+            <br>
+            <span style="color:#989898;font-size: 11px">this feature can be enabled in plugin setting.</span>
+
+            <h4>4. Automatic Money Rain</h4>
+            this feature example is this page header (money rain on the pig).
+            <br>
+            <span style="color:#989898;font-size: 11px">this feature can be enabled in plugin setting.</span>
+            <br>
+
+            <h4>5. Custom Script</h4>
+            with API document you can with very simple code make money/paper rain in any size and type and control speed. In addition with this documentation, you can use the main script on any site ( not just wp)
+            <br>
+            <span style="color:#989898;font-size: 11px">a custom script must add.</span>
+        </div>
+
+        <h1>colors examples:</h1>
+        <div>
+            <div class="colorful">
+                <div class="title" style="border-left: 5px solid gold;">
+                    <span style="color: gold; ">colorful</span> Money clickable Area
+                </div>
+            </div>
+            <div class="zone" type="pig-green">
+                <div class="title" style="border-left: 5px solid forestgreen;">
+                    <span style="color: forestgreen; ">Green</span> Money clickable Area
+                </div>
+            </div>
+            <div class="zone" type="pig-pink">
+                <div class="title" style="border-left: 5px solid purple;">
+                    <span style="color: purple; ">purple</span> Money clickable Area
+                </div>
+            </div>
+        </div>
+        <div style="margin-top: 50px;">
+            <div class="zone" type="paper-white">
+                <div class="title" style="border-left: 5px solid white;">
+                    <span style="color: white; ">white</span> paper clickable Area
+                </div>
+            </div>
+            <div class="zone" type="paper-red">
+                <div class="title" style="border-left: 5px solid indianred;">
+                    <span style="color: indianred; ">indianred</span> paper clickable Area
+                </div>
+            </div>
+            <div class="zone" type="paper-orange">
+                <div class="title" style="border-left: 5px solid orange;">
+                    <span style="color: orange; ">orange</span> paper clickable Area
+                </div>
+            </div>
+        </div>
+
+        <div style=" position: relative; width: 100%; float: left">
+            <h1>size example:</h1>
+            <div class="big" type="paper-white" style="width: 96%">
+                <div class="title" style="border-left: 5px solid white;     width: calc(100% - 11px);">
+                    <span style="color: white; ">big size</span> clickable Area
+                </div>
+            </div>
+        </div>
+
+        <div class="unselectable" style=" position: relative; width: 100%; float: left">
+            <h1>custom use example:</h1>
+            when you push this button , money explode happen on it :
+            <button id="explode">money explode</button>
+        </div>
+
+    </div>
+    <div class="footer unselectable">
+        <img src="resources/logo.png">
+        <span class="text">
+            Designed and Developed by Blackcore Team.
+        </span>
+    </div>
+</body>
+</html>

@@ -1,0 +1,1 @@
+document.addEventListener("DOMContentLoaded",function(){document.body.addEventListener("click",function(a){new BlackMoney(document.body,window.makeitrain.time,{x:a.pageX-10,y:a.pageY-40},window.makeitrain.getType(),window.makeitrain.size,window.makeitrain.getDir())})});

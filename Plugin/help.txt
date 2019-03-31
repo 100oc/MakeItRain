@@ -1,0 +1,3 @@
+copy "blackcore-make-ir-rain" folder to MAIN_WORDPRESS_FOLDER/wp-content/plugins
+OR
+upload "blackcore-make-ir-rain.zip" in wordpress admin->plugins
